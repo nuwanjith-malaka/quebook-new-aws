@@ -73,7 +73,10 @@
   <br>
   {% endfor %} 
   {% else %}
+  {%if friends %}
+  {% else %}
   <h3>You have no friends yet. Find some friends.</h3>
+  {% endif %}
   {% endif %}
 </div>
 {% endblock %}

@@ -28,7 +28,7 @@ def HomeView(request):
             question_asked_long_ago = str(question_date_diff.days) + ' days'  
         question.question_asked_long_ago = question_asked_long_ago
 
-    return render(request, 'qbook/home.html', {'questions':questions})
+    return render(request, 'qbook/home.html', {'questions':questions, 'friends':friends})
 
 
 def LatestQuestionsView(request):

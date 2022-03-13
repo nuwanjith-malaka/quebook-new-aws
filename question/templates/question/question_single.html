@@ -43,7 +43,7 @@
     <a href="{% url 'questiondownvote' question.id %}"><button style="margin:5px;" type="submit" class="btn btn-danger btn-sm">downvote</button></a>
     {% endif %}
     
-    </a> Asked By <a href="{% url 'asker' question.user.id %}">{% if question.user.askerprofile.photo %}
+    </a> Asked By <a href="{% url 'asker' question.user.id %}">{% if question.user.asker.photo %}
     <img src="{{question.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
     {{ question.user.username }}</a> on {{ question.question_asked_long_ago }} ago <span class="badge alert-success">{{question.upvotes.count}} upvotes</span> <span class="badge alert-danger"> {{question.downvotes.count}} downvotes</span> <span class="badge alert-secondary">{{question.views}} views</span>
     {% if request.user == question.user %}</span> 
@@ -54,11 +54,11 @@
     </p>
     
     <div>
-      <!-- <h4>Comments</h4> -->
+      <h4>Comments</h4>
       {% if question_comments %}
         {% for comment in question_comments %}
           <p class="grey">{{comment.comment}}</p><p >
-          Commented By <a href="{% url 'asker' comment.user.id %}">{% if comment.user.askerprofile.photo %}
+          Commented By <a href="{% url 'asker' comment.user.id %}">{% if comment.user.asker.photo %}
             <img src="{{comment.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
             {{ comment.user.username }}</a> on {{ comment.comment_asked_long_ago }} ago
           {% if request.user == comment.user %}
@@ -101,7 +101,7 @@
           <a href="{% url 'answerdownvote' answer.id %}"><button style="margin:5px;" type="submit" class="btn btn-danger btn-sm">downvote</button></a>
           {% endif %}
           <a href="{% url 'answer_comment_form' answer.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">comment</button></a>
-          Answerd By <a href="{% url 'asker' answer.user.id %}">{% if answer.user.askerprofile.photo %}
+          Answerd By <a href="{% url 'asker' answer.user.id %}">{% if answer.user.asker.photo %}
             <img src="{{answer.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
             {{ answer.user.username }}</a> on {{ answer.answer_asked_long_ago }} ago <span class="badge alert-success">{{answer.upvotes.count}} upvotes</span>  <span class="badge alert-danger">{{answer.downvotes.count}} downvotes</span> </p>
           {% if request.user == answer.user %}
@@ -113,7 +113,7 @@
             {% for comment in answer.comments.all %}
             <hr>
               <p class="grey">{{comment.comment}}</p><p >
-              Commented By <a href="{% url 'asker' comment.user.id %}">{% if comment.user.askerprofile.photo %}
+              Commented By <a href="{% url 'asker' comment.user.id %}">{% if comment.user.asker.photo %}
                 <img src="{{comment.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
                 {{ comment.user.username }}</a> on {{ comment.date }} ago </p>
               {% if request.user == comment.user %}

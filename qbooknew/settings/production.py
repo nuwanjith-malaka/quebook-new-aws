@@ -28,5 +28,5 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 
-LOGIN_REDIRECT_URL = 'http://quebooknew2.herokuapp.com/'
-LOGIN_URL = 'http://quebooknew2.herokuapp.com/login/'
+LOGIN_REDIRECT_URL = 'https://quebooknew2.herokuapp.com/'
+LOGIN_URL = 'https://quebooknew2.herokuapp.com/login/'

@@ -44,7 +44,7 @@
     {% endif %}
     
     </a> Asked By <a href="{% url 'asker' question.user.id %}">{% if question.user.askerprofile.photo %}
-    <img src="{{question.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
+    <img src="{{question.user.askerprofile.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
     {{ question.user.username }}</a> on {{ question.question_asked_long_ago }} ago <span class="badge alert-success">{{question.upvotes.count}} upvotes</span> <span class="badge alert-danger"> {{question.downvotes.count}} downvotes</span> <span class="badge alert-secondary">{{question.views}} views</span>
     {% if request.user == question.user %}</span> 
     <a href="{% url 'question_edit' question.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">Edit</button></a>
@@ -59,7 +59,7 @@
         {% for comment in question_comments %}
           <p class="grey">{{comment.comment}}</p><p >
           Commented By <a href="{% url 'asker' comment.user.id %}">{% if comment.user.askerprofile.photo %}
-            <img src="{{comment.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
+            <img src="{{comment.user.askerprofile.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
             {{ comment.user.username }}</a> on {{ comment.comment_asked_long_ago }} ago
           {% if request.user == comment.user %}
               <a href="{% url 'question_comment_edit' comment.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">Edit</button></a>
@@ -102,7 +102,7 @@
           {% endif %}
           <a href="{% url 'answer_comment_form' answer.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">comment</button></a>
           Answerd By <a href="{% url 'asker' answer.user.id %}">{% if answer.user.askerprofile.photo %}
-            <img src="{{answer.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
+            <img src="{{answer.user.askerprofile.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
             {{ answer.user.username }}</a> on {{ answer.answer_asked_long_ago }} ago <span class="badge alert-success">{{answer.upvotes.count}} upvotes</span>  <span class="badge alert-danger">{{answer.downvotes.count}} downvotes</span> </p>
           {% if request.user == answer.user %}
             <p><a href="{% url 'answer_edit' answer.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">Edit</button></a>
@@ -114,7 +114,7 @@
             <hr>
               <p class="grey">{{comment.comment}}</p><p >
               Commented By <a href="{% url 'asker' comment.user.id %}">{% if comment.user.askerprofile.photo %}
-                <img src="{{comment.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
+                <img src="{{comment.user.askerprofile.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
                 {{ comment.user.username }}</a> on {{ comment.date }} ago </p>
               {% if request.user == comment.user %}
                 <a href="{% url 'answer_comment_edit' comment.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">Edit</button></a>

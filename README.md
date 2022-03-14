@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Quebook</h1> 
+    <h1>Quebook <p>see live demo https://murmuring-plateau-61051.herokuapp.com</p></h1> 
     <h3>This is a social media app for O/L students in Sri lanka</h3>
     <p>Students can create a profile and ask questions relating to their subjects.</p> 
     <img src="https://user-images.githubusercontent.com/76420546/158170395-68ad188e-ab53-4f6e-a9f9-33f9a796ffb7.png" width="900px" style="border: 1px solif black;">

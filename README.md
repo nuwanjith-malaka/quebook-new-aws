@@ -17,7 +17,7 @@
     <img src="https://user-images.githubusercontent.com/76420546/158174170-d6091c8d-d66b-4992-9977-030a6fdfa718.png" width="900px" style="border: 1px solif black;">
     <hr>
     <img src="https://user-images.githubusercontent.com/76420546/158174197-2911d718-4712-4d7d-b2b1-75c9b06a8572.png" width="900px" style="border: 1px solif black;">
-    <p>Home page will display logged student's questions and his/her questions</p>
+    <p>Home page will display logged student's questions and his/her friends's questions</p>
     <img src="https://user-images.githubusercontent.com/76420546/158206657-bc3f1a49-724c-406b-bea9-bec644c073c1.png">
     <p>Latest questions page will display all questions ordered by date. Latest questions will be displayed on top.</p>
     <img src="https://user-images.githubusercontent.com/76420546/158207779-5f9db9bd-3c78-4758-a95e-2be42efe6797.png">

@@ -35,5 +35,10 @@
     <img src="https://user-images.githubusercontent.com/76420546/158216354-53c5e935-3032-4b1c-a400-aab022802487.png">
     <hr>
     <img src="https://user-images.githubusercontent.com/76420546/158216367-ab992d82-0f7e-4518-af20-beceeda0a8d1.png">
+    <p>You can see the api of this app by visiting https://murmuring-plateau-61051.herokuapp.com/api/</p>
+    <img src="https://user-images.githubusercontent.com/76420546/158219687-bb5fce0f-0157-4a77-9660-3fd8fffdeb7f.png">
+    <hr>
+    <img src="https://user-images.githubusercontent.com/76420546/158219718-d95d05e1-9008-41d6-9b0e-39ae017f75d7.png">
+    <p>* Mainly I was forcusing on backend of this app. So please check this app on a desktop or laptop computer.</p>
 </body>
 </html>

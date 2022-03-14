@@ -26,7 +26,7 @@
     <img src="https://user-images.githubusercontent.com/76420546/158208856-52b0dcb4-3268-47da-a666-1e63b5e233b5.png">
     <p>Students can give answers,comments,upvotes and downvotes to questions. After some student viewed some question, views of that question will be incremented by one .</p>
     <img src="https://user-images.githubusercontent.com/76420546/158211740-e1babe84-337a-43c0-8c6a-b9707bc65083.png">
-    <p>Students can give comments,upvotes and downvotes to answers. Some question's answers will be ordered automatically according to upvotes and downvotes of that answer.Most upvoted and least downvoted answers will be shown on top.</p>
+    <p>Students can give comments,upvotes and downvotes to answers. Question's answers will be ordered automatically according to upvotes and downvotes of that answer.Most upvoted and least downvoted answers will be shown on top.</p>
     <img src="https://user-images.githubusercontent.com/76420546/158212867-de1e113c-2c10-4f51-85d7-487877c666f5.png">
     <p>Is some student forgets his/her password he/she can reset password by entering his/her email address to send one time password reset link.</p>
     <img src="https://user-images.githubusercontent.com/76420546/158216354-53c5e935-3032-4b1c-a400-aab022802487.png">

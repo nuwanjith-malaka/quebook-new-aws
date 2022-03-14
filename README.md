@@ -10,6 +10,7 @@
     <h3>This is a social media app for O/L students in Sri lanka</h3>
     <p>Students can create a profile and ask questions relating to their subjects.</p> 
     <img src="https://user-images.githubusercontent.com/76420546/158170395-68ad188e-ab53-4f6e-a9f9-33f9a796ffb7.png" width="900px" style="border: 1px solif black;">
+    <hr>
     <img src="https://user-images.githubusercontent.com/76420546/158170416-fc29bd08-ec9e-4df0-ae0d-20a9b83ee4ba.png" width="900px" style="border: 1px solif black;">
     <p>Asked questions can be seen in his/her profile.</p> 
     <img src="https://user-images.githubusercontent.com/76420546/158172149-f5ec097c-a847-4e6d-a369-bd4230c5419d.png" width="900px" style="border: 1px solif black;">
@@ -23,6 +24,7 @@
     <img src="https://user-images.githubusercontent.com/76420546/158207779-5f9db9bd-3c78-4758-a95e-2be42efe6797.png">
     <p>Subjects page will display all the subjects. Questions related to relevent subject can be seen from that subject's page.</p>
     <img src="https://user-images.githubusercontent.com/76420546/158208620-77f5ff13-1fdd-4c8d-9a5f-d57a33023a93.png">
+    <hr>
     <img src="https://user-images.githubusercontent.com/76420546/158208856-52b0dcb4-3268-47da-a666-1e63b5e233b5.png">
     <p>Students can give answers,comments,upvotes and downvotes to questions. After some student viewed some question, views of that question will be incremented by one .</p>
     <img src="https://user-images.githubusercontent.com/76420546/158211740-e1babe84-337a-43c0-8c6a-b9707bc65083.png">
@@ -30,6 +32,7 @@
     <img src="https://user-images.githubusercontent.com/76420546/158212867-de1e113c-2c10-4f51-85d7-487877c666f5.png">
     <p>Is some student forgets his/her password he/she can reset password by entering his/her email address to send one time password reset link.</p>
     <img src="https://user-images.githubusercontent.com/76420546/158216354-53c5e935-3032-4b1c-a400-aab022802487.png">
+    <hr>
     <img src="https://user-images.githubusercontent.com/76420546/158216367-ab992d82-0f7e-4518-af20-beceeda0a8d1.png">
 </body>
 </html>

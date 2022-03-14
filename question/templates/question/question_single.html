@@ -115,7 +115,7 @@
               <p class="grey">{{comment.comment}}</p><p >
               Commented By <a href="{% url 'asker' comment.user.id %}">{% if comment.user.asker.photo %}
                 <img src="{{comment.user.asker.photo.url}}"  width="30px" height="30px" style="margin-right: 3px;">{% endif %}
-                {{ comment.user.username }}</a> on {{ comment.date }} ago </p>
+                {{ comment.user.username }}</a> on {{ comment.date }} </p>
               {% if request.user == comment.user %}
                 <a href="{% url 'answer_comment_edit' comment.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">Edit</button></a>
                   <a href="{% url 'answer_comment_delete' comment.id %}"><button style="margin:5px;" type="submit" class="btn btn-info btn-sm">Delete</button></a></p>

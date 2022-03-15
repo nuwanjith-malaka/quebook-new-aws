@@ -18,11 +18,11 @@ def HomeView(request):
     questions = Question.objects.filter(Q(user__in=friends)).order_by('-date')
     for question in questions:
         question_date_diff = datetime.now(timezone.utc)-question.date
-        if question_date_diff.days/365 > 1:
+        if question_date_diff.days//365 > 1:
             question_asked_long_ago = str(question_date_diff.days/365) + ' years'
-        elif question_date_diff.days/30 > 1:
+        elif question_date_diff.days//30 > 1:
             question_asked_long_ago = str(question_date_diff.days/30) + ' months'
-        elif question_date_diff.days/7 > 1:
+        elif question_date_diff.days//7 > 1:
             question_asked_long_ago = str(question_date_diff.days/7) + ' weeks'   
         else:
             question_asked_long_ago = str(question_date_diff.days) + ' days'  
@@ -38,11 +38,11 @@ def LatestQuestionsView(request):
     questions = Question.objects.all().order_by('-date')
     for question in questions:
         question_date_diff = datetime.now(timezone.utc)-question.date
-        if question_date_diff.days/365 > 1:
+        if question_date_diff.days//365 > 1:
             question_asked_long_ago = str(question_date_diff.days/365) + ' years'
-        elif question_date_diff.days/30 > 1:
+        elif question_date_diff.days//30 > 1:
             question_asked_long_ago = str(question_date_diff.days/30) + ' months'
-        elif question_date_diff.days/7 > 1:
+        elif question_date_diff.days//7 > 1:
             question_asked_long_ago = str(question_date_diff.days/7) + ' weeks'   
         else:
             question_asked_long_ago = str(question_date_diff.days) + ' days'  

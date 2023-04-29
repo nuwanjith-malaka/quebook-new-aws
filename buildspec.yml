@@ -1,0 +1,26 @@
+version: 0.2
+env:
+  parameter-store:
+    django_secret_key: "DJANGO_SECRET_KEY"
+    email_host_user: "EMAIL_HOST_USER"
+    email_host_password: "EMAIL_HOST_PASSWORD"
+    aws_access_key_id: "ACCESS_KEY_ID_AWS"
+    aws_secret_access_key_id: "SECRET_ACCESS_KEY_AWS"
+    aws_storage_bucket_name: "STORAGE_BUCKET_NAME_AWS"
+    db_host: "DB_HOST"
+    db_password: "DB_PASSWORD"
+phases:
+  pre_build:
+    commands:
+      - echo "Before running build"
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - python manage.py runserver
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  name: quebookbuildartifact-$(date +%Y-%m-%d)

@@ -13,6 +13,17 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import environ
+import boto3
+
+# Add region_name, aws_access_key_id and aws_secret_access_key in development.
+#ssm_client = boto3.client('ssm',region_name="",aws_access_key_id="",aws_secret_access_key="")
+ssm_client = boto3.client('ssm')
+django_secret_key = ssm_client.get_parameter(Name='DJANGO_SECRET_KEY', WithDecryption=True)['Parameter']['Value']
+email_host_user = ssm_client.get_parameter(Name='EMAIL_HOST_USER', WithDecryption=True)['Parameter']['Value']
+email_host_password = ssm_client.get_parameter(Name='EMAIL_HOST_PASSWORD', WithDecryption=True)['Parameter']['Value']
+aws_access_key_id = ssm_client.get_parameter(Name='ACCESS_KEY_ID_AWS', WithDecryption=True)['Parameter']['Value']
+aws_secret_access_key_id = ssm_client.get_parameter(Name='SECRET_ACCESS_KEY_AWS', WithDecryption=True)['Parameter']['Value']
+aws_storage_bucket_name = ssm_client.get_parameter(Name='STORAGE_BUCKET_NAME_AWS', WithDecryption=True)['Parameter']['Value']
 
 env = environ.Env()
 # reading .env file
@@ -24,6 +35,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Take environment variables from .env file
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = django_secret_key
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -133,13 +147,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = email_host_user
+EMAIL_HOST_PASSWORD = email_host_password
 EMAIL_USE_TLS = True
 
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+AWS_ACCESS_KEY_ID = aws_access_key_id
+AWS_SECRET_ACCESS_KEY = aws_secret_access_key_id
+AWS_STORAGE_BUCKET_NAME = aws_storage_bucket_name
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = 'public-read'

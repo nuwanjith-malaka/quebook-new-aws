@@ -17,4 +17,4 @@ DATABASES = {
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login/'
 
-# this is a test string for testBranch
+# this is a test string for main branch !

@@ -17,7 +17,7 @@ import boto3
 
 # Add region_name, aws_access_key_id and aws_secret_access_key in development.
 #ssm_client = boto3.client('ssm',region_name="",aws_access_key_id="",aws_secret_access_key="")
-ssm_client = boto3.client('ssm',region_name="us-east-1",aws_access_key_id="AKIASZBASGJO5QY6COO3",aws_secret_access_key="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")
+ssm_client = boto3.client('ssm')
 django_secret_key = ssm_client.get_parameter(Name='DJANGO_SECRET_KEY', WithDecryption=True)['Parameter']['Value']
 email_host_user = ssm_client.get_parameter(Name='EMAIL_HOST_USER', WithDecryption=True)['Parameter']['Value']
 email_host_password = ssm_client.get_parameter(Name='EMAIL_HOST_PASSWORD', WithDecryption=True)['Parameter']['Value']

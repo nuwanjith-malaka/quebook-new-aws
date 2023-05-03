@@ -2,12 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/quebook-new-aws
+    destination: /home/ubuntu/quebook-new-aws
   - source: server_configs/apache/000-default.conf
     destination: /etc/apache2/sites-available/
-    runas: root
 hooks:
   BeforeInstall:
       - location: server_configs/scripts/before_install.sh
+        runas: ubuntu 
   AfterInstall:
       - location: server_configs/scripts/after_install.sh
+        runas: ubuntu 

@@ -9,7 +9,7 @@ ELB_DNS = 'Quebook-test-web-elb-315417778.us-east-1.elb.amazonaws.com'
 var1 = ELB_DNS
 var2 = 'public DNS of ec2 instance'
 allowed_host = var1
-ALLOWED_HOSTS = [allowed_host]
+ALLOWED_HOSTS = ["*"]
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -28,5 +28,5 @@ DATABASES = {
     }
 }
 
-LOGIN_REDIRECT_URL = 'http://' + allowed_host + '/'
-LOGIN_URL = 'http://' + allowed_host + '/login/'
+#LOGIN_REDIRECT_URL = 'http://' + allowed_host + '/'
+#LOGIN_URL = 'http://' + allowed_host + '/login/'

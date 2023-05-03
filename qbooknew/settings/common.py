@@ -15,16 +15,6 @@ import os
 import environ
 import boto3
 
-# Add region_name, aws_access_key_id and aws_secret_access_key in development.
-#ssm_client = boto3.client('ssm',region_name="",aws_access_key_id="",aws_secret_access_key="")
-ssm_client = boto3.client('ssm')
-django_secret_key = ssm_client.get_parameter(Name='DJANGO_SECRET_KEY', WithDecryption=True)['Parameter']['Value']
-email_host_user = ssm_client.get_parameter(Name='EMAIL_HOST_USER', WithDecryption=True)['Parameter']['Value']
-email_host_password = ssm_client.get_parameter(Name='EMAIL_HOST_PASSWORD', WithDecryption=True)['Parameter']['Value']
-aws_access_key_id = ssm_client.get_parameter(Name='ACCESS_KEY_ID_AWS', WithDecryption=True)['Parameter']['Value']
-aws_secret_access_key_id = ssm_client.get_parameter(Name='SECRET_ACCESS_KEY_AWS', WithDecryption=True)['Parameter']['Value']
-aws_storage_bucket_name = ssm_client.get_parameter(Name='STORAGE_BUCKET_NAME_AWS', WithDecryption=True)['Parameter']['Value']
-
 env = environ.Env()
 # reading .env file
 environ.Env.read_env()
@@ -35,6 +25,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Take environment variables from .env file
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+# Add region_name, aws_access_key_id and aws_secret_access_key in development.
+#ssm_client = boto3.client('ssm',region_name="us-east-1",aws_access_key_id=env('AWS_ACCESS_KEY_ID_MALA'), aws_secret_access_key= env('AWS_SECRET_ACCESS_KEY_MALA'))
+ssm_client = boto3.client('ssm')
+django_secret_key = ssm_client.get_parameter(Name='DJANGO_SECRET_KEY', WithDecryption=True)['Parameter']['Value']
+email_host_user = ssm_client.get_parameter(Name='EMAIL_HOST_USER', WithDecryption=True)['Parameter']['Value']
+email_host_password = ssm_client.get_parameter(Name='EMAIL_HOST_PASSWORD', WithDecryption=True)['Parameter']['Value']
+aws_access_key_id = ssm_client.get_parameter(Name='ACCESS_KEY_ID_AWS', WithDecryption=True)['Parameter']['Value']
+aws_secret_access_key_id = ssm_client.get_parameter(Name='SECRET_ACCESS_KEY_AWS', WithDecryption=True)['Parameter']['Value']
+aws_storage_bucket_name = ssm_client.get_parameter(Name='STORAGE_BUCKET_NAME_AWS', WithDecryption=True)['Parameter']['Value']
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = django_secret_key

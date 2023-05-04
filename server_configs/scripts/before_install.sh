@@ -14,8 +14,8 @@ sudo ./install auto
 
 # update os & install python3
 sudo apt-get update
-sudo apt-get install -y python3 python-dev python3-pip python3.10-venv apache2 libapache2-mod-wsgi-py3
-pip install --root --upgrade virtualenv
+sudo apt-get install -y python3.10 python3.10-dev python3.10-venv python3-pip apache2 libapache2-mod-wsgi-py3
+python3 -m pip install --root virtualenv
 
 # delete app
 sudo rm -rf /home/ubuntu/quebook-new-aws

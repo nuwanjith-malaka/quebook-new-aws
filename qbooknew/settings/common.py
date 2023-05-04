@@ -28,7 +28,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Add region_name, aws_access_key_id and aws_secret_access_key in development.
 #ssm_client = boto3.client('ssm',region_name="us-east-1",aws_access_key_id=env('AWS_ACCESS_KEY_ID_MALA'), aws_secret_access_key= env('AWS_SECRET_ACCESS_KEY_MALA'))
-ssm_client = boto3.client('ssm')
+ssm_client = boto3.client('ssm', region_name="us-east-1")
 django_secret_key = ssm_client.get_parameter(Name='DJANGO_SECRET_KEY', WithDecryption=True)['Parameter']['Value']
 email_host_user = ssm_client.get_parameter(Name='EMAIL_HOST_USER', WithDecryption=True)['Parameter']['Value']
 email_host_password = ssm_client.get_parameter(Name='EMAIL_HOST_PASSWORD', WithDecryption=True)['Parameter']['Value']

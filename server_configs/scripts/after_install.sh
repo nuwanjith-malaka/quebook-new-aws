@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+sudo -s
 # Install libaries
 cd /home/ubuntu/quebook-new-aws
 python3 -m venv venv
@@ -9,7 +9,7 @@ python manage.py migrate
 python manage.py collectstatic --no-input
 
 # Set permission for all files
-sudo chown -R www-data:www-data /home/ubuntu/quebook-new-aws
+chown -R www-data:www-data /home/ubuntu/quebook-new-aws
 
 # Restart services
-sudo service apache2 restart
+service apache2 restart

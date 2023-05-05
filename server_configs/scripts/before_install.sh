@@ -2,8 +2,7 @@
 
 # clean codedeploy-agent files and apache for a fresh install
 sudo rm -rf /home/ubuntu/install
-sudo apt autoremove
-sudo rm -rf /etc/apache2
+sudo apt-get purge apache2 
 
 # install CodeDeploy agent
 sudo apt-get -y update

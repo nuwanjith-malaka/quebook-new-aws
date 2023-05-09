@@ -19,3 +19,4 @@ python3 -m pip install --root virtualenv
 
 # delete app
 sudo rm -rf /home/ubuntu/quebook-new-aws
+sudo rm /etc/apache2/sites-available/000-default.conf

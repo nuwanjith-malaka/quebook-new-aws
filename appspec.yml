@@ -5,6 +5,8 @@ files:
     destination: /home/ubuntu/quebook-new-aws
   - source: server_configs/apache/000-default.conf
     destination: /etc/apache2/sites-available/
+    overwrite: true
+file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
       - location: server_configs/scripts/before_install.sh

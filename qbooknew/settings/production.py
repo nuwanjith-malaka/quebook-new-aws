@@ -24,6 +24,3 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-#LOGIN_REDIRECT_URL = 'http://' + allowed_host + '/'
-#LOGIN_URL = 'http://' + allowed_host + '/login/'

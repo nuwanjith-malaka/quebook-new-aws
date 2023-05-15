@@ -14,7 +14,3 @@ DATABASES = {
     }
 }
 
-#LOGIN_REDIRECT_URL = '/'
-#LOGIN_URL = 'login/'
-
-# this is a test string from test1branch !

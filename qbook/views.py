@@ -19,11 +19,11 @@ def HomeView(request):
     for question in questions:
         question_date_diff = datetime.now(timezone.utc)-question.date
         if question_date_diff.days//365 > 1:
-            question_asked_long_ago = str(question_date_diff.days/365) + ' years'
+            question_asked_long_ago = str(question_date_diff.days//365) + ' years'
         elif question_date_diff.days//30 > 1:
-            question_asked_long_ago = str(question_date_diff.days/30) + ' months'
+            question_asked_long_ago = str(question_date_diff.days//30) + ' months'
         elif question_date_diff.days//7 > 1:
-            question_asked_long_ago = str(question_date_diff.days/7) + ' weeks'   
+            question_asked_long_ago = str(question_date_diff.days//7) + ' weeks'   
         else:
             question_asked_long_ago = str(question_date_diff.days) + ' days'  
         question.question_asked_long_ago = question_asked_long_ago
@@ -39,11 +39,11 @@ def LatestQuestionsView(request):
     for question in questions:
         question_date_diff = datetime.now(timezone.utc)-question.date
         if question_date_diff.days//365 > 1:
-            question_asked_long_ago = str(question_date_diff.days/365) + ' years'
+            question_asked_long_ago = str(question_date_diff.days//365) + ' years'
         elif question_date_diff.days//30 > 1:
-            question_asked_long_ago = str(question_date_diff.days/30) + ' months'
+            question_asked_long_ago = str(question_date_diff.days//30) + ' months'
         elif question_date_diff.days//7 > 1:
-            question_asked_long_ago = str(question_date_diff.days/7) + ' weeks'   
+            question_asked_long_ago = str(question_date_diff.days//7) + ' weeks'   
         else:
             question_asked_long_ago = str(question_date_diff.days) + ' days'  
         question.question_asked_long_ago = question_asked_long_ago

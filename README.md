@@ -8,7 +8,10 @@
 <body>
     <h1>Quebook</h1> 
     <h3>This is a social media app for O/L students in Sri lanka.</h3>
-    [<img src="https://img.youtube.com/vi/bLYGAvhhiGI/hqdefault.jpg" width="50%">](https://youtu.be/bLYGAvhhiGI)
+    <a href="https://youtu.be/bLYGAvhhiGI" target="_blank">
+    <img src="https://img.youtube.com/vi/bLYGAvhhiGI/hqdefault.jpg" alt="Watch the video" width="240" height="180" />
+    </a>
+    //[<img src="" width="50%">]()
     <p>This project consists of two architectures.</p>
     <h3>1. High Level Architecture.</h3>
     <h3>2. Low Level Architecture.</h3>

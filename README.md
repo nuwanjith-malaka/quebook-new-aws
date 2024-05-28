@@ -8,11 +8,11 @@
 <body>
     <h1>Quebook</h1> 
     <h3>This is a social media app for O/L students in Sri lanka.</h3>
-    [![Watch the video](https://img.youtube.com/vi/bLYGAvhhiGI/hqdefault.jpg)](https://youtu.be/bLYGAvhhiGI)
+    [<img src="https://img.youtube.com/vi/bLYGAvhhiGI/hqdefault.jpg" width="50%">](https://youtu.be/bLYGAvhhiGI)
     <p>This project consists of two architectures.</p>
-    <p>1. High Level Architecture.</p>
-    <p>2. Low Level Architecture.</p>
-    <p>High Level Architecture</p>
+    <h3>1. High Level Architecture.</h3>
+    <h3>2. Low Level Architecture.</h3>
+    <h3>High Level Architecture</h3>
     <p>Amazon Virtual Private Cloud (Amazon VPC)is used to launch AWS resources in a logically isolated virtual network.</p>
     <img src="https://malakas3.s3.amazonaws.com/quebook/quebookVpc.png" width="900px" style="border: 1px solid black;">
     <p>Four subnets (two public for ec2 instances and two private for database instances )are used in two avialability zones.</p>

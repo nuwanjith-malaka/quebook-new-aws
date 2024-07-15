@@ -21,6 +21,7 @@
     <hr>
     <img src="https://user-images.githubusercontent.com/76420546/158219718-d95d05e1-9008-41d6-9b0e-39ae017f75d7.png">
     <h3>High Level Architecture</h3>
+    <img src="https://malakas3.s3.amazonaws.com/quebook/quebookImages/quebookArchitecture.png" />
     <p>Amazon Virtual Private Cloud (Amazon VPC)is used to launch AWS resources in a logically isolated virtual network.</p>
     <img src="https://malakas3.s3.amazonaws.com/quebook/quebookImages/quebookVpc.png" />
     <p>Four subnets (two public for ec2 instances and two private for database instances )are used in two avialability zones.</p>
